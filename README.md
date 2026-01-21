@@ -29,17 +29,38 @@ The generator will create three main files:
 
 The `hackathon_config.yaml` file contains all the customizable elements:
 
-- `event`: Event details
-- `theme`: Hackathon theme and focus areas
-  - `type`: Either 'specific' or 'open'
+### Core Settings
+- **`event`**: Event details (name, date, description)
+- **`theme`**: Hackathon theme and focus areas
+  - `type`: Either `'specific'` or `'open'`
   - `title`: Theme title (for specific themes)
   - `description`: Theme description
   - `focus_areas`: List of specific areas to focus on
   - `technologies`: List of recommended technologies
-- `contact`: Contact information
-- `submission_guidelines`: Submission guidelines
-- `judging_criteria`: Judging criteria
-- `thought_starters`: Project ideas and inspiration
+- **`contact`**: Contact information and communication channels
+- **`submission_guidelines`**: Fork, clone, and submission instructions
+
+### Judging & Evaluation
+- **`judges`**: Panel of judges with names, titles, organizations, and expertise areas
+- **`judging_criteria`**: Scoring categories with weights (must total 100%)
+- **`evaluation_process`**: Multi-phase evaluation workflow
+  - `overview`: High-level description of the process
+  - `phases`: List of evaluation phases (review, demos, deliberation, announcement)
+  - `scoring_methodology`: How scores are calculated (1-5 scale)
+
+### Project Requirements
+- **`project_constraints`**: Technical requirements and rules
+  - `required_technologies`: Must-use technologies with docs links
+  - `rules`: Project rules and guidelines
+  - `bonus_criteria`: Ways to earn bonus points
+
+### Resources
+- **`resources`**: Starter code and documentation
+  - `starter_repos`: GitHub repos with descriptions
+  - `documentation`: Official docs and console links
+
+### Ideas
+- **`thought_starters`**: Project ideas and inspiration
 
 ## After Generation
 

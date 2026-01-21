@@ -41,10 +41,41 @@ function replaceTemplateVars(content, data) {
     const keys = key.trim().split('.');
     let value = data;
     for (const k of keys) {
+      if (value === undefined || value === null) {
+        return match; // Return original if path doesn't exist
+      }
       value = value[k];
     }
-    return value || match;
+    return value !== undefined && value !== null ? value : match;
   });
+}
+
+// Helper function to process conditionals within a specific context (for loops)
+function processConditionalsInContext(content, itemName, item) {
+  return content.replace(
+    /\{%\s*if\s+([^%]+)\s*%\}([\s\S]*?)(?:\{%\s*else\s*%\}([\s\S]*?))?\{%\s*endif\s*%\}/g,
+    (match, condition, ifContent, elseContent = '') => {
+      const trimmedCondition = condition.trim();
+      
+      // Check if condition references the loop item (e.g., phase.duration)
+      if (trimmedCondition.startsWith(itemName + '.')) {
+        const propertyPath = trimmedCondition.substring(itemName.length + 1);
+        const keys = propertyPath.split('.');
+        let value = item;
+        for (const k of keys) {
+          if (value === undefined || value === null) {
+            return elseContent;
+          }
+          value = value[k];
+        }
+        const isTruthy = value !== undefined && value !== null && value !== '' && value !== false;
+        return isTruthy ? ifContent : elseContent;
+      }
+      
+      // Return original match for non-loop-item conditions (will be processed later)
+      return match;
+    }
+  );
 }
 
 // Helper function to process template loops
@@ -55,18 +86,32 @@ function processTemplateLoops(content, data) {
       const keys = collectionPath.trim().split('.');
       let collection = data;
       for (const k of keys) {
+        if (collection === undefined || collection === null) {
+          return ''; // Return empty string if collection doesn't exist
+        }
         collection = collection[k];
+      }
+
+      if (!Array.isArray(collection)) {
+        return ''; // Return empty string if not an array
       }
 
       return collection
         .map((item, index) => {
           let result = template;
+          
+          // Process conditionals within the loop context first
+          result = processConditionalsInContext(result, itemName, item);
+          
           // Replace simple item reference (for string values)
           result = result.replace(new RegExp(`{{${itemName}}}`, 'g'), item);
           // Replace item properties (for object values)
           result = result.replace(
             new RegExp(`{{${itemName}\\.([^}]+)}}`, 'g'),
-            (m, key) => item[key.trim()] || m
+            (m, key) => {
+              const value = item[key.trim()];
+              return value !== undefined && value !== null ? value : m;
+            }
           );
           // Replace loop properties
           result = result.replace(/{{loop\.index}}/g, index + 1);
@@ -77,25 +122,38 @@ function processTemplateLoops(content, data) {
   );
 }
 
+// Helper function to get nested value from data object
+function getNestedValue(data, varPath) {
+  const keys = varPath.trim().split('.');
+  let value = data;
+  for (const k of keys) {
+    if (value === undefined || value === null) {
+      return undefined;
+    }
+    value = value[k];
+  }
+  return value;
+}
+
 // Helper function to process template conditionals
 function processTemplateConditionals(content, data) {
   return content.replace(
     /\{%\s*if\s+([^%]+)\s*%\}([\s\S]*?)(?:\{%\s*else\s*%\}([\s\S]*?))?\{%\s*endif\s*%\}/g,
     (match, condition, ifContent, elseContent = '') => {
-      // Parse condition (simple equality check for now)
-      const conditionMatch = condition
-        .trim()
-        .match(/^(.+?)\s*==\s*['"](.+?)['"]$/);
-      if (!conditionMatch) return match; // If condition format is not recognized, return original
-
-      const [, varPath, expectedValue] = conditionMatch;
-      const keys = varPath.trim().split('.');
-      let value = data;
-      for (const k of keys) {
-        value = value[k];
+      const trimmedCondition = condition.trim();
+      
+      // Check for equality condition (e.g., theme.type == 'specific')
+      const equalityMatch = trimmedCondition.match(/^(.+?)\s*==\s*['"](.+?)['"]$/);
+      if (equalityMatch) {
+        const [, varPath, expectedValue] = equalityMatch;
+        const value = getNestedValue(data, varPath);
+        return value === expectedValue ? ifContent : elseContent;
       }
 
-      return value === expectedValue ? ifContent : elseContent;
+      // Check for truthiness condition (e.g., phase.duration, contact.additional_info)
+      const value = getNestedValue(data, trimmedCondition);
+      const isTruthy = value !== undefined && value !== null && value !== '' && value !== false;
+      return isTruthy ? ifContent : elseContent;
     }
   );
 }

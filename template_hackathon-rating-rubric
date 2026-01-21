@@ -4,6 +4,58 @@
 
 This rubric provides a structured framework for evaluating hackathon submissions. Each project will be scored across multiple categories on a scale of 1-5, with specific criteria for each score level.
 
+---
+
+## Judging Panel
+
+{% for judge in judges %}
+### {{judge.name}}
+**{{judge.title}}** | {{judge.organization}}  
+_Expertise: {{judge.expertise}}_
+
+{% endfor %}
+
+---
+
+## Project Requirements
+
+### Required Technologies
+All submissions **must** use the following technologies:
+
+{% for tech in project_constraints.required_technologies %}
+- **{{tech.name}}**: {{tech.description}}
+{% endfor %}
+
+### Project Rules
+{% for rule in project_constraints.rules %}
+- {{rule}}
+{% endfor %}
+
+### Bonus Point Opportunities
+{% for bonus in project_constraints.bonus_criteria %}
+- {{bonus}}
+{% endfor %}
+
+---
+
+## Evaluation Process
+
+{{evaluation_process.overview}}
+
+### Evaluation Phases
+
+{% for phase in evaluation_process.phases %}
+**{{phase.name}}** {% if phase.duration %}_({{phase.duration}})_{% endif %}  
+{{phase.description}}
+
+{% endfor %}
+
+### Scoring Methodology
+
+{{evaluation_process.scoring_methodology}}
+
+---
+
 ## Scoring Categories
 
 {% for criterion in judging_criteria %}
@@ -12,13 +64,13 @@ This rubric provides a structured framework for evaluating hackathon submissions
 
 _{{criterion.description}}_
 
-| Score | Criteria                   |
-| ----- | -------------------------- |
-| 5     | Exceptional implementation |
-| 4     | Very good implementation   |
-| 3     | Good implementation        |
-| 2     | Basic implementation       |
-| 1     | Poor implementation        |
+| Score | Criteria | Description |
+| ----- | -------- | ----------- |
+| 5     | Exceptional | Exceeds expectations, innovative approach, production-ready quality |
+| 4     | Very Good | Strong implementation with minor areas for improvement |
+| 3     | Good | Meets requirements with solid execution |
+| 2     | Basic | Functional but lacks polish or depth |
+| 1     | Needs Work | Incomplete implementation or significant issues |
 
 {% endfor %}
 

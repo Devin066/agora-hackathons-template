@@ -1,7 +1,75 @@
 event:
   name: 'Agora Hackathon'
-  date: 'June 2025'
+  date: 'Month Year'
   description: 'Welcome to the Agora Hackathon! This repo serves as the central hub for hackathon submissions.'
+
+# Judges panel - customize with your event's judges
+judges:
+  - name: 'Judge Name'
+    title: 'Job Title'
+    organization: 'Agora'
+    expertise: 'Area of expertise'
+  - name: 'Judge Name'
+    title: 'Job Title'
+    organization: 'Agora'
+    expertise: 'Area of expertise'
+  # Add more judges as needed
+
+# Project constraints and requirements
+project_constraints:
+  required_technologies:
+    - name: 'Agora RTC SDK'
+      description: 'Real-time audio/video communication'
+      documentation: 'https://docs.agora.io/en/video-calling/overview'
+    # Add additional required technologies as needed
+  rules:
+    - 'All projects must integrate the required Agora technologies'
+    - 'Code must be original work created during the hackathon'
+    - 'Teams may use pre-existing libraries, frameworks, and APIs (with proper attribution)'
+    # Add additional rules as needed
+  bonus_criteria:
+    - 'Integration of additional Agora products (RTM, Cloud Recording, etc.)'
+    - 'Exceptional documentation and demo quality'
+    # Add additional bonus criteria as needed
+
+# Resources and starter code for participants
+resources:
+  starter_repos:
+    - name: 'Sample Repository'
+      url: 'https://github.com/AgoraIO-Community/example-repo'
+      description: 'Description of the sample repository'
+    # Add additional starter repos as needed
+  documentation:
+    - name: 'Agora Documentation'
+      url: 'https://docs.agora.io/'
+    - name: 'Agora Console'
+      url: 'https://console.agora.io/'
+    # Add additional documentation links as needed
+
+# Evaluation process details
+evaluation_process:
+  overview: 'Projects will be evaluated through a structured multi-phase process combining technical review, live demonstrations, and deliberation among judges.'
+  phases:
+    - name: 'Submission Review'
+      duration: '30 minutes per project'
+      description: 'Judges independently review code, documentation, and demo videos'
+    - name: 'Live Demonstrations'
+      duration: '10 minutes presentation + 5 minutes Q&A'
+      description: 'Teams present their projects and answer technical questions from judges'
+    - name: 'Scoring & Deliberation'
+      duration: '45-60 minutes total'
+      description: 'Judges complete individual scoring, then meet to calibrate and finalize rankings'
+    - name: 'Results Announcement'
+      description: 'Winners announced with feedback highlights for all teams'
+  scoring_methodology: |-
+    Each criterion is scored on a 1-5 scale:
+    - 5 (Exceptional): Exceeds expectations, innovative approach, could be production-ready
+    - 4 (Very Good): Strong implementation with minor areas for improvement
+    - 3 (Good): Meets requirements with solid execution
+    - 2 (Basic): Functional but lacks polish or depth
+    - 1 (Needs Work): Incomplete or significant issues
+    
+    Final scores are calculated as weighted averages. Bonus points (up to +1) may be awarded for exceptional use of partner technologies or innovation.
 
 theme:
   type: 'specific' # or 'open'

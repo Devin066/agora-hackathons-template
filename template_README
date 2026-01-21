@@ -9,20 +9,57 @@
 {{theme.description}}
 
 ### Focus Areas
-{% for area in theme.focus_areas %}
-- {{area}}
+{% for area in theme.focus_areas %}- {{area}}
+{% endfor %}
 
-  {% endfor %}
 ### Recommended Technologies
-{% for tech in theme.technologies %}
-- {{tech}}
-
-  {% endfor %}
-  {% else %}
+{% for tech in theme.technologies %}- {{tech}}
+{% endfor %}
+{% else %}
 ## 🎯 **Theme**
 
 This hackathon is open-ended! We encourage you to explore any area that interests you, as long as it incorporates Agora's real-time communication technologies in an innovative way.
 {% endif %}
+
+---
+
+## 🔧 **Project Requirements & Constraints**
+
+### Required Technologies
+All submissions **must** integrate the following:
+
+| Technology | Description | Documentation |
+|------------|-------------|---------------|
+{% for tech in project_constraints.required_technologies %}| **{{tech.name}}** | {{tech.description}} | [Docs]({{tech.documentation}}) |
+{% endfor %}
+
+### Rules
+{% for rule in project_constraints.rules %}- {{rule}}
+{% endfor %}
+
+### Bonus Point Opportunities
+Go above and beyond for extra credit:
+{% for bonus in project_constraints.bonus_criteria %}- ⭐ {{bonus}}
+{% endfor %}
+
+---
+
+## 📚 **Resources & Starter Code**
+
+Get up and running quickly with these official repositories:
+
+### Starter Repositories
+
+| Repository | Description |
+|------------|-------------|
+{% for repo in resources.starter_repos %}| [**{{repo.name}}**]({{repo.url}}) | {{repo.description}} |
+{% endfor %}
+
+### Documentation
+{% for doc in resources.documentation %}- [{{doc.name}}]({{doc.url}})
+{% endfor %}
+
+---
 
 Follow the steps below to **fork, develop, and submit** your project.
 
@@ -80,10 +117,15 @@ git push
 
 ## 🏆 **Judging Criteria**
 
-Projects will be evaluated based on:  
+Projects will be evaluated based on:
 {% for criterion in judging_criteria %}
-✅ **{{criterion.name}}** – {{criterion.description}}  
+✅ **{{criterion.name}}** ({{criterion.weight}}%) – {{criterion.description}}{% endfor %}
+
+### Judging Panel
+{% for judge in judges %}- **{{judge.name}}** – {{judge.title}}, {{judge.organization}}
 {% endfor %}
+
+📋 See the full [Judging Rubric](./hackathon-rating-rubric.md) for detailed scoring criteria and evaluation process.
 
 ---
 
