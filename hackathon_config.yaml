@@ -31,11 +31,11 @@ project_constraints:
   required_technologies:
     - name: "Agora RTC SDK"
       description: "Low-latency real-time audio and video communication"
-      documentation: "https://docs.agora.io/en/video-calling/overview"
+      documentation: "https://docs.agora.io/en/interactive-live-streaming/overview/product-overview"
 
-    - name: "Agora RTM SDK"
+    - name: "Agora Signaling SDK"
       description: "Real-time messaging and signaling"
-      documentation: "https://docs.agora.io/en/real-time-messaging/overview"
+      documentation: "https://docs.agora.io/en/signaling/overview/product-overview"
 
     - name: "AWS Cloud Services"
       description: "Cloud hosting, storage, and AI infrastructure"
