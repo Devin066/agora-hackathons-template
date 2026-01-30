@@ -89,15 +89,14 @@ Winners announced with technical and product feedback
 
 ### Scoring Methodology
 
-Each submission is evaluated using the following weighted criteria:
+Each criterion is scored on a 1-5 scale:
+- 5 (Exceptional): Exceeds expectations, innovative approach, could be production-ready
+- 4 (Very Good): Strong implementation with minor areas for improvement
+- 3 (Good): Meets requirements with solid execution
+- 2 (Basic): Functional but lacks polish or depth
+- 1 (Needs Work): Incomplete or significant issues
 
-- Technical Innovation (20%)
-- Experience Design (20%)
-- Integration & Use of Agora Technologies (20%)
-- Impact & Real-World Application (15%)
-- Deployment & Documentation (15%)
-- Overall Execution (10%)
-
+Final scores are calculated as weighted averages. Bonus points (up to +1) may be awarded for exceptional use of partner technologies or innovation.
 
 ---
 
