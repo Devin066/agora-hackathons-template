@@ -119,7 +119,8 @@ git push
 
 Projects will be evaluated based on:
 {% for criterion in judging_criteria %}
-✅ **{{criterion.name}}** ({{criterion.weight}}%) – {{criterion.description}}{% endfor %}
+✅ **{{criterion.name}}** ({{criterion.weight}}%) – {{criterion.description}}
+{% endfor %}
 
 ### Judging Panel
 {% for judge in judges %}- **{{judge.name}}** – {{judge.title}}, {{judge.organization}}

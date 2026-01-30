@@ -30,7 +30,7 @@ All submissions **must** use the following technologies:
 
 - **Agora RTC SDK**: Low-latency real-time audio and video communication
 
-- **Agora RTM SDK**: Real-time messaging and signaling
+- **Agora Signaling SDK**: Real-time messaging and signaling
 
 - **AWS Cloud Services**: Cloud hosting, storage, and AI infrastructure
 
