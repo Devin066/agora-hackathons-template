@@ -305,7 +305,7 @@ try {
 
   // Clean up template files, config, and script
   console.log('Cleaning up...');
-  cleanup();
+  // cleanup();
   console.log('Agora hackathon project is ready for your event!');
 } catch (error) {
   console.error('Error updating templates:', error);

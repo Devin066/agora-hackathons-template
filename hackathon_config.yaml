@@ -1,141 +1,211 @@
 event:
-  name: 'Agora Hackathon'
-  date: 'Month Year'
-  description: 'Welcome to the Agora Hackathon! This repo serves as the central hub for hackathon submissions.'
+  name: "Innovation Cup - Agora Hackathon"
+  date: "March 2026"
+  description: >
+    The Innovation Cup – Agora is a challenge hackathon designed to empower builders
+    and innovators through hands-on experience in cloud computing, artificial
+    intelligence, cybersecurity, and real-time communication technologies.
+    Organized by Agora Ambassador PH and AWS Cloud Clubs Philippines, this event
+    brings together students, educators, and industry professionals in a focused
+    environment for learning, collaboration, and solution development. Participants
+    are challenged to design and develop innovative, voice-first conversational AI
+    solutions using Agora’s Conversational AI Engine and Agora RTC to enable real-time,
+    low-latency voice and video interactions. The program encourages collaboration
+    through mentorship, technical workshops, and practical innovation challenges,
+    providing participants with the guidance and tools needed to transform ideas into
+    functional prototypes. This hackathon serves as a platform for skill development,
+    industry exposure, and professional growth.
 
-# Judges panel - customize with your event's judges
 judges:
-  - name: 'Judge Name'
-    title: 'Job Title'
-    organization: 'Agora'
-    expertise: 'Area of expertise'
-  - name: 'Judge Name'
-    title: 'Job Title'
-    organization: 'Agora'
-    expertise: 'Area of expertise'
-  # Add more judges as needed
+  - name: "TBA"
+    title: "TBA"
+    organization: "Agora"
+    expertise: "Agora RTC SDK"
 
-# Project constraints and requirements
+  - name: "Derek Zheng"
+    title: "DevRel & Partnership"
+    organization: "Agora"
+    expertise: "Agora RTC SDK"
+
 project_constraints:
   required_technologies:
-    - name: 'Agora RTC SDK'
-      description: 'Real-time audio/video communication'
-      documentation: 'https://docs.agora.io/en/video-calling/overview'
-    # Add additional required technologies as needed
-  rules:
-    - 'All projects must integrate the required Agora technologies'
-    - 'Code must be original work created during the hackathon'
-    - 'Teams may use pre-existing libraries, frameworks, and APIs (with proper attribution)'
-    # Add additional rules as needed
-  bonus_criteria:
-    - 'Integration of additional Agora products (RTM, Cloud Recording, etc.)'
-    - 'Exceptional documentation and demo quality'
-    # Add additional bonus criteria as needed
+    - name: "Agora RTC SDK"
+      description: "Low-latency real-time audio and video communication"
+      documentation: "https://docs.agora.io/en/video-calling/overview"
 
-# Resources and starter code for participants
+    - name: "Agora RTM SDK"
+      description: "Real-time messaging and signaling"
+      documentation: "https://docs.agora.io/en/real-time-messaging/overview"
+
+    - name: "AWS Cloud Services"
+      description: "Cloud hosting, storage, and AI infrastructure"
+      documentation: "https://docs.aws.amazon.com/"
+
+    - name: "TRAE IDE (Recommended)"
+      description: "AI-assisted development environment for planning, coding, debugging, and documentation"
+      documentation: "https://trae.ai/"
+
+  rules:
+    - "All projects must integrate Agora technologies"
+    - "All source code must be created during the hackathon period"
+    - "Teams are encouraged to use TRAE IDE for development support and workflow management"
+    - "Third-party libraries and APIs are allowed with proper attribution"
+    - "Projects must follow data privacy and ethical AI guidelines"
+    - "Teams must submit working demos and documentation"
+
+  bonus_criteria:
+    - "Advanced use of Agora Convo AI and multi-agent systems"
+    - "Effective use of TRAE IDE for rapid prototyping, debugging, and documentation"
+    - "Integration of AWS AI/ML services"
+    - "Strong focus on accessibility and inclusivity"
+    - "Well-designed system architecture and scalability"
+
 resources:
   starter_repos:
-    - name: 'Sample Repository'
-      url: 'https://github.com/AgoraIO-Community/example-repo'
-      description: 'Description of the sample repository'
-    # Add additional starter repos as needed
-  documentation:
-    - name: 'Agora Documentation'
-      url: 'https://docs.agora.io/'
-    - name: 'Agora Console'
-      url: 'https://console.agora.io/'
-    # Add additional documentation links as needed
+    - name: "Convo AI Starter Kit"
+      url: "https://github.com/AgoraIO-Community/convo-ai-starter"
+      description: "Starter template for building real-time conversational agents"
 
-# Evaluation process details
+    - name: "Next.js RTC Template"
+      url: "https://github.com/AgoraIO-Community/nextjs-agora-rtc"
+      description: "Full-stack template for Agora-powered web apps"
+
+    - name: "Voice Agent Sample"
+      url: "https://github.com/AgoraIO-Community/voice-agent-sample"
+      description: "Example of a voice-to-voice AI assistant using Agora"
+
+  documentation:
+    - name: "Agora Developer Portal"
+      url: "https://docs.agora.io/"
+
+    - name: "AWS AI Services"
+      url: "https://aws.amazon.com/machine-learning/"
+
+    - name: "Agora Convo AI Guides"
+      url: "https://docs.agora.io/en/conversational-ai/overview/product-overview"
+
+    - name: "Hackathon Technical Handbook"
+      url: "https://github.com/AgoraIO-Community/hackathon-handbook"
+
+    - name: "TRAE IDE User Guide"
+      url: "https://trae.ai/docs"
+      description: "Guides on using TRAE for AI-assisted development and collaboration"
+
 evaluation_process:
-  overview: 'Projects will be evaluated through a structured multi-phase process combining technical review, live demonstrations, and deliberation among judges.'
+  overview: "Projects will be evaluated based on technical excellence, real-world relevance, innovation, and live performance during demonstrations."
+
   phases:
-    - name: 'Submission Review'
-      duration: '30 minutes per project'
-      description: 'Judges independently review code, documentation, and demo videos'
-    - name: 'Live Demonstrations'
-      duration: '10 minutes presentation + 5 minutes Q&A'
-      description: 'Teams present their projects and answer technical questions from judges'
-    - name: 'Scoring & Deliberation'
-      duration: '45-60 minutes total'
-      description: 'Judges complete individual scoring, then meet to calibrate and finalize rankings'
-    - name: 'Results Announcement'
-      description: 'Winners announced with feedback highlights for all teams'
-  scoring_methodology: |-
-    Each criterion is scored on a 1-5 scale:
-    - 5 (Exceptional): Exceeds expectations, innovative approach, could be production-ready
-    - 4 (Very Good): Strong implementation with minor areas for improvement
-    - 3 (Good): Meets requirements with solid execution
-    - 2 (Basic): Functional but lacks polish or depth
-    - 1 (Needs Work): Incomplete or significant issues
-    
-    Final scores are calculated as weighted averages. Bonus points (up to +1) may be awarded for exceptional use of partner technologies or innovation.
+    - name: "Final Presentation & Demo"
+      duration: "7 minutes pitch + 5 minutes Q&A"
+      description: "Live walkthrough of core features, AI interactions, and development approach."
+
+    - name: "Judges Alignment"
+      duration: "10-20 minutes total (all teams combined)"
+      description: "Consolidated scoring, feedback review, and final ranking."
+
+    - name: "Awards Announcement"
+      description: "Winners announced with technical and product feedback"
+
+  scoring_methodology: |
+    Each submission is evaluated using the following weighted criteria:
+
+    - Technical Innovation (20%)
+    - Experience Design (20%)
+    - Integration & Use of Agora Technologies (20%)
+    - Impact & Real-World Application (15%)
+    - Deployment & Documentation (15%)
+    - Overall Execution (10%)
 
 theme:
-  type: 'specific' # or 'open'
-  title: 'AI-Powered Real-Time Communication'
-  description: "Build innovative solutions using Agora's Conversational AI Engine to showcase Agora powered Voice-to-Voice AI."
+  type: "specific"
+  title: "Building Real-Time AI Systems"
+
+  description: "Design and build real-time AI-powered conversational platforms using Agora and AWS technologies."
+
   focus_areas:
-    - 'Real-time video/audio communication'
-    - 'AI-powered content moderation'
-    - 'Voice and video analytics'
-    - 'Interactive live streaming'
+    - "Voice-to-voice AI agents"
+    - "Multi-modal communication platforms"
+    - "Collaborative AI assistants"
+    - "AI-driven customer and community support"
+    - "Smart learning and mentoring systems"
+
   technologies:
-    - 'Agora Conversational AI Engine'
-    - 'Agora RTC SDK'
-    - 'Agora Cloud Recording'
-    - 'Agora Content Moderation'
-    - 'OpenAI API'
-    - 'Hugging Face Models'
+    - "Agora Conversational AI Engine (Required)"
+    - "Agora RTC SDK (Required)"
+    - "AWS Bedrock (Encouraged)"
+    - "Other Agora SDKs (Encouraged)"
+    - "ElevenLabs TTS (Encouraged)"
+    - "Zenmux or other fast LLMs (Encouraged)"
+    - "Supported partner Avatars (Encouraged)"
+    - "AWS EC2 / S3 (Encouraged)"
+    - "AWS Lambda (Encouraged)"
 
 contact:
-  name: 'Hermes'
-  email: 'hermes@agora.io'
+  name: "Hennessy Solis"
+  email: "hennessy.solis@agora.io"
+
   communication:
-    platform: 'Discord' # or 'Slack', 'Discord', 'Teams', etc.
-    channel: 'hackathon-support'
-    link: 'https://discord.gg/agora-hackathon' # Optional link to join
-  additional_info: 'For urgent matters, please reach out directly via email.'
+    platform: "Discord"
+    channel: "PH-Innovation-Cup"
+    link: "https://discord.gg/bmSu7CgdwQ"
+
+  additional_info: "For urgent technical issues, include your team name and project ID in the email subject."
 
 submission_guidelines:
-  fork_instructions: 'Click the Fork button on the top right to create a copy of this repository under your GitHub account.'
-  clone_instructions: 'After forking, clone the repository to your local machine.'
+  fork_instructions: "Fork this repository to your personal GitHub account before starting development."
+  clone_instructions: "Clone your fork locally and set the main branch as upstream."
+
+  development_guidance:
+    - "Teams may use TRAE IDE for planning, coding, testing, and documentation"
+    - "All generated code must be reviewed and validated by team members"
+    - "Teams should explain how tools like TRAE were used"
+
   team_folder_structure: |
     submissions/
-     ├── team-name/
-     │   ├── README.md  # (Required: Describe your project)
-     │   ├── demo.mp4  # (Required: A demo video)
-     │   ├── src/  # (Your source code)
-     │   └── docs/  # (Any documentation or images)
+      ├── team-name/
+      │   ├── README.md
+      │   ├── demo.mp4
+      │   ├── src/
+      │   ├── infra/
+      │   └── docs/
 
 judging_criteria:
-  - name: 'Innovation'
+  - name: "Innovation and Originality"
     weight: 15
-    description: 'Uniqueness of the idea'
-  - name: 'Functionality'
+    description: "Creativity and uniqueness"
+
+  - name: "System Functionality"
     weight: 20
-    description: 'How well it works'
-  - name: 'Impact'
-    weight: 5
-    description: 'Real-world use case potential'
-  - name: 'Technical Execution'
+    description: "Reliability and completeness"
+
+  - name: "Social and Business Impact"
+    weight: 10
+    description: "Community and enterprise value"
+
+  - name: "Technical Architecture"
     weight: 20
-    description: 'Code quality and implementation'
-  - name: 'Documentation and Ease of Testing'
+    description: "System design and scalability"
+
+  - name: "Documentation and Reproducibility"
+    weight: 15
+    description: "Clarity of setup and testing"
+
+  - name: "User Experience and Accessibility"
     weight: 20
-    description: 'Quality of documentation and how easily judges can test the project'
-  - name: 'User Experience'
-    weight: 20
-    description: 'Quality of interaction and overall user experience'
+    description: "Ease of use and accessibility support"
 
 thought_starters:
-  - title: 'AI-Powered Customer Service'
-    description: 'Create an intelligent customer service solution that can handle complex queries and provide personalized responses.'
-  - title: 'Virtual Event Platform'
-    description: 'Develop a platform that makes virtual events more engaging and interactive using AI.'
-  - title: 'Smart Home Assistant'
-    description: 'Build an AI-powered home assistant that can understand context and provide natural interactions.'
-  - title: 'Educational AI Tutor'
-    description: 'Create an AI tutor that can adapt to different learning styles and provide personalized education.'
-  - title: 'Healthcare Communication Platform'
-    description: 'Develop a platform that helps healthcare providers communicate more effectively with patients using AI.'
+  - title: "AI Campus Assistant"
+    description: "Real-time AI agent for student support"
+
+  - title: "Disaster Response Communication Hub"
+    description: "AI-powered voice routing and translation"
+
+  - title: "Remote Skills Coaching Platform"
+    description: "Interactive coaching with live feedback"
+
+  - title: "Smart Community Helpdesk"
+    description: "Virtual helpdesk using conversational AI"
+
+  - title: "Mental Wellness Companion"
+    description: "Privacy-first AI companion for guided conversations"
