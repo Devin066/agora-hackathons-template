@@ -154,11 +154,17 @@ git push
 Projects will be evaluated based on:
 
 ✅ **Innovation and Originality** (15%) – Creativity and uniqueness
+
 ✅ **System Functionality** (20%) – Reliability and completeness
+
 ✅ **Social and Business Impact** (10%) – Community and enterprise value
+
 ✅ **Technical Architecture** (20%) – System design and scalability
+
 ✅ **Documentation and Reproducibility** (15%) – Clarity of setup and testing
+
 ✅ **User Experience and Accessibility** (20%) – Ease of use and accessibility support
+
 
 ### Judging Panel
 - **TBA** – TBA, Agora
