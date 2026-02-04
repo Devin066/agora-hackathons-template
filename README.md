@@ -177,7 +177,7 @@ Projects will be evaluated based on:
 
 ## ❓ **Need Help?**
 
-For any questions, reach out to [**Hennessy Solis**](mailto:hennessy.solis@agora.io) or join our Discord channel at [PH-Innovation-Cup](https://discord.gg/bmSu7CgdwQ).
+For any questions, reach out to [**Hennessy Solis**](mailto:hennessy.solis@agora.io) or join our Discord channel at [Agora Hackathon Challenge](https://discord.gg/bmSu7CgdwQ).
 
 
 For urgent technical issues, include your team name and project ID in the email subject.
