@@ -1,0 +1,248 @@
+event:
+  name: "Agora Voice AI Hackathon Manila 2026"
+  date: "Monday, March 16, 2026"
+  description: |-
+    Building Real-Time Voice AI Systems used to feel complex. Now you can prototype faster with AI-assisted development workflows and real-time voice tools.
+
+    You will use TRAE IDE to practice modern AI-assisted development workflows, and Agora technologies to build real-time, low-latency Voice AI solutions.
+
+    **Event Details**
+    - Venue: Arthaland Century Pacific Tower, 4th Ave, 30th St, Taguig
+    - Format: In-person, single-day event
+    - Team Size: 1 to 4 members per team
+    - Registration: https://luma.com/iuxsx2ia
+
+    **Prizes** (₱130,000 including cash and credits)
+    - Grand Prize: ₱15,000 cash + ₱57.3k credits
+    - 2nd Prize: ₱10,000 cash + ₱28.7k credits
+    - 3rd Prize: ₱5,000 cash + ₱17.2k credits
+
+    **Schedule**
+    - 8:00 AM to 8:30 AM — Registration and Check-in
+    - 8:30 AM to 9:00 AM — Opening Ceremony
+    - 9:00 AM to 10:00 AM — Workshop (Intro to TRAE IDE and Agora)
+    - 10:00 AM to 12:00 PM — Hackathon Begins (Build Phase 1)
+    - 12:00 PM to 12:40 PM — Working Lunch Break
+    - 12:45 PM to 4:00 PM — Build Phase 2 (Deep Work)
+    - 4:00 PM to 4:15 PM — Working Snack Break
+    - 4:15 PM to 5:30 PM — Build Phase 3 (Final Sprint)
+    - 5:30 PM to 6:00 PM — Submission Deadline and Dinner (submit via GitHub PR)
+    - 6:00 PM to 6:40 PM — Judging Deliberation
+    - 6:40 PM to 8:00 PM — Top Team Presentations (5 min pitch + 2 min Q&A)
+
+    **Before You Arrive**
+    - Bring an internet-facing laptop for this hands-on session.
+    - Register an Agora Developer account in advance: https://console.agora.io/
+
+judges:
+  - name: "TBA"
+    title: "TBA"
+    organization: "Agora"
+    expertise: "Agora RTC SDK"
+
+  - name: "Derek Zheng"
+    title: "DevRel & Partnership"
+    organization: "Agora"
+    expertise: "Agora RTC SDK"
+
+project_constraints:
+  required_technologies:
+    - name: "Agora RTC SDK"
+      description: "Low-latency real-time audio and video communication"
+      documentation: "https://docs.agora.io/en/interactive-live-streaming/overview/product-overview"
+
+    - name: "Agora Conversational AI Engine"
+      description: "Hosted platform for building real-time voice AI agents"
+      documentation: "https://docs.agora.io/en/conversational-ai/overview/product-overview"
+
+    - name: "TRAE IDE"
+      description: "AI-assisted development environment for planning, coding, debugging, and documentation"
+      documentation: "https://trae.ai/"
+
+  rules:
+    - "All projects must integrate Agora technologies"
+    - "All source code must be created during the hackathon period"
+    - "Teams are encouraged to use TRAE IDE for development support and workflow management"
+    - "Third-party libraries and APIs are allowed with proper attribution"
+    - "Projects must follow data privacy and ethical AI guidelines"
+    - "Teams must submit working demos and documentation"
+
+resources:
+  starter_repos:
+    - name: "Convo AI Starter Kit"
+      url: "https://github.com/AgoraIO-Community/convo-ai-starter"
+      description: "Starter template for building real-time conversational agents"
+
+    - name: "Next.js RTC Template"
+      url: "https://github.com/AgoraIO-Community/nextjs-agora-rtc"
+      description: "Full-stack template for Agora-powered web apps"
+
+    - name: "Voice Agent Sample"
+      url: "https://github.com/AgoraIO-Community/voice-agent-sample"
+      description: "Example of a voice-to-voice AI assistant using Agora"
+
+  documentation:
+    - name: "Agora Developer Portal"
+      url: "https://docs.agora.io/"
+
+    - name: "Agora Developer Console"
+      url: "https://console.agora.io/"
+
+    - name: "Event Page (Luma)"
+      url: "https://luma.com/iuxsx2ia"
+
+    - name: "Agora Convo AI Guides"
+      url: "https://docs.agora.io/en/conversational-ai/overview/product-overview"
+
+    - name: "TEN Framework"
+      url: "https://github.com/TEN-framework/ten-framework"
+
+    - name: "Hackathon Technical Handbook"
+      url: "https://github.com/AgoraIO-Community/hackathon-handbook"
+
+    - name: "TRAE IDE User Guide"
+      url: "https://trae.ai/docs"
+      description: "Guides on using TRAE for AI-assisted development and collaboration"
+
+evaluation_process:
+  overview: "The evaluation process consists of two rounds: an initial technical screening of all submissions, followed by final stage presentations for the top teams."
+
+  phases:
+    - name: "Round 1: Technical Screening"
+      duration: "4:00 PM - 5:30 PM"
+      description: "Judges review code, demos, and documentation for all submissions to select the top finalists."
+
+    - name: "Round 2: Final Presentations"
+      duration: "5 minutes pitch + 2 minutes Q&A"
+      description: "Top selected teams present their solutions on stage to the full panel."
+
+    - name: "Final Deliberation"
+      duration: "40 minutes"
+      description: "Judges review scores, discuss finalists, and select the winners."
+
+    - name: "Awards Announcement"
+      description: "Winners announced with technical and product feedback"
+
+  scoring_methodology: |-
+    Each criterion is scored on a 1-5 scale:
+    - 5 (Exceptional): Exceeds expectations, innovative approach, could be production-ready
+    - 4 (Very Good): Strong implementation with minor areas for improvement
+    - 3 (Good): Meets requirements with solid execution
+    - 2 (Basic): Functional but lacks polish or depth
+    - 1 (Needs Work): Incomplete or significant issues
+    
+    Final scores are calculated as weighted averages. Bonus points (up to +1) may be awarded for exceptional use of partner technologies or innovation.
+
+theme:
+  type: "specific"
+  title: "Building Real-Time Voice AI Systems"
+
+  description: "Prototype faster with AI-assisted development workflows and real-time voice tools using TRAE IDE and Agora technologies."
+
+  focus_areas:
+    - "Voice-to-voice AI agents"
+    - "Multi-modal communication platforms"
+    - "Collaborative AI assistants"
+    - "AI-driven customer and community support"
+    - "Smart learning and mentoring systems"
+
+  technologies:
+    - "Agora Conversational AI Engine (Required)"
+    - "Agora RTC SDK (Required)"
+    - "AWS Bedrock (Encouraged)"
+    - "Other Agora SDKs (Encouraged)"
+    - "ElevenLabs TTS (Encouraged)"
+    - "Zenmux or other fast LLMs (Encouraged)"
+    - "Supported partner Avatars (Encouraged)"
+    - "AWS EC2 / S3 (Encouraged)"
+    - "AWS Lambda (Encouraged)"
+
+contact:
+  name: "Hennessy Solis"
+  email: "hennessy.solis@agora.io"
+
+  communication:
+    platform: "Discord"
+    channel: "Agora Voice AI Hackathon Manila 2026"
+    link: "https://discord.gg/bmSu7CgdwQ"
+
+  additional_info: "For urgent technical issues, include your team name and project ID in the email subject."
+
+submission_guidelines:
+  fork_instructions: "Fork this repository to your personal GitHub account before starting development."
+  clone_instructions: "Clone your fork locally and set the main branch as upstream."
+
+  development_guidance:
+    - "Teams may use TRAE IDE for planning, coding, testing, and documentation"
+    - "All generated code must be reviewed and validated by team members"
+    - "Teams should explain how tools like TRAE were used"
+    - "Team size is 1 to 4 members per team"
+    - "Register an Agora Developer account in advance: https://console.agora.io/"
+
+  team_folder_structure: |
+    submissions/
+      ├── team-name/
+      │   ├── README.md
+      │   ├── demo.mp4
+      │   ├── src/
+      │   ├── infra/
+      │   └── docs/
+
+judging_criteria:
+  initial_phase:
+    - name: "Integration & Use of Agora Technologies"
+      weight: 30
+      description: "Agora's Conversational AI Engine and/or RTC is meaningfully and centrally integrated into the product, as verified from the submitted codebase and demo video."
+
+    - name: "System Functionality"
+      weight: 25
+      description: "The product works end-to-end reliably, as demonstrated through the submitted demo video and repository without team assistance."
+
+    - name: "Technical Architecture"
+      weight: 20
+      description: "System design, technology choices, and scalability considerations are sound and assessable from the codebase and documentation alone."
+
+    - name: "Originality of Concept"
+      weight: 15
+      description: "Evaluates the freshness and distinctiveness of the idea — judges assess whether the solution offers a novel approach to Voice AI that goes beyond common or predictable use cases."
+
+    - name: "Submission Compliance"
+      weight: 10
+      description: "Evaluates adherence to the required GitHub repository format and boilerplate structure as specified in the submission guidelines."
+
+  final_phase:
+    - name: "Functionality & Demo Quality"
+      weight: 25
+      description: "Code quality, completeness, polish, and reliability of the submission, including a fully functional and stable live demo with complete features."
+
+    - name: "Innovation and Creativity"
+      weight: 25
+      description: "Creativity, uniqueness, novelty of idea combined with real-world value and relevance."
+
+    - name: "Impact & Real-World Application"
+      weight: 20
+      description: "Potential for solving real problems through process automation or user engagement."
+
+    - name: "Sustainability & Feasibility"
+      weight: 10
+      description: "Community value, enterprise applicability, real-world relevance sustainability and business viability."
+
+    - name: "Presentation & Pitch"
+      weight: 20
+      description: "Clear, engaging delivery of problem, solution, and demo with strong storytelling and visuals."
+
+thought_starters:
+  - title: "AI Campus Assistant"
+    description: "Real-time AI agent for student support"
+
+  - title: "Disaster Response Communication Hub"
+    description: "AI-powered voice routing and translation"
+
+  - title: "Remote Skills Coaching Platform"
+    description: "Interactive coaching with live feedback"
+
+  - title: "Smart Community Helpdesk"
+    description: "Virtual helpdesk using conversational AI"
+
+  - title: "Mental Wellness Companion"
+    description: "Privacy-first AI companion for guided conversations"

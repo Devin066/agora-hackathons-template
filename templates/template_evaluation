@@ -1,0 +1,83 @@
+# {{event.name}} - Evaluation
+
+## Project Overview
+
+[Provide a brief description of the project being evaluated, including its main features and objectives]
+
+## Scoring Sheet
+
+### Round 1: Initial Phase
+| Name | {% for criteria in judging_criteria.initial_phase %}{{criteria.name}} ({{criteria.weight}}%) | {% endfor %}Total Score | Notes |
+|------|{% for criteria in judging_criteria.initial_phase %}---|{% endfor %}---|---|
+| [Project Name] | {% for criteria in judging_criteria.initial_phase %} PTS \* ({{criteria.weight_decimal}}) | {% endfor %}\_\_ | [Brief assessment] |
+
+### Round 2: Final Phase
+| Name | {% for criteria in judging_criteria.final_phase %}{{criteria.name}} ({{criteria.weight}}%) | {% endfor %}Total Score | Notes |
+|------|{% for criteria in judging_criteria.final_phase %}---|{% endfor %}---|---|
+| [Project Name] | {% for criteria in judging_criteria.final_phase %} PTS \* ({{criteria.weight_decimal}}) | {% endfor %}\_\_ | [Brief assessment] |
+
+## Scoring Details
+
+### Round 1: Initial Phase
+
+{% for criteria in judging_criteria.initial_phase %}### {{loop.index}}. {{criteria.name}}
+
+**Score: \_\_**
+
+{{criteria.description}}
+
+**Evaluation Notes:**
+[Provide detailed feedback on this criterion]
+
+- **Strengths:**
+
+- **Areas for Improvement:**
+
+{% endfor %}
+
+### Round 2: Final Phase
+
+{% for criteria in judging_criteria.final_phase %}### {{loop.index}}. {{criteria.name}}
+
+**Score: \_\_**
+
+{{criteria.description}}
+
+**Evaluation Notes:**
+[Provide detailed feedback on this criterion]
+
+- **Strengths:**
+
+- **Areas for Improvement:**
+
+{% endfor %}
+
+## Total Score
+
+**Final Score: \_\_/5**
+
+## Overall Feedback
+
+[Provide comprehensive feedback on the submission]
+
+### Strengths
+
+-
+-
+-
+
+### Areas for Improvement
+
+-
+-
+-
+
+### Recommendations
+
+-
+-
+-
+
+### Judge Comments
+
+[Additional comments from the judge]

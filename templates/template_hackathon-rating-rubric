@@ -1,0 +1,120 @@
+# {{event.name}} - Judging Rubric
+
+## Overview
+
+This rubric provides a structured framework for evaluating hackathon submissions. Each project will be scored across multiple categories on a scale of 1-5, with specific criteria for each score level.
+
+---
+
+## Judging Panel
+
+{% for judge in judges %}
+### {{judge.name}}
+**{{judge.title}}** | {{judge.organization}}  
+_Expertise: {{judge.expertise}}_
+
+{% endfor %}
+
+---
+
+## Project Requirements
+
+### Required Technologies
+All submissions **must** use the following technologies:
+
+{% for tech in project_constraints.required_technologies %}
+- **{{tech.name}}**: {{tech.description}}
+{% endfor %}
+
+### Project Rules
+{% for rule in project_constraints.rules %}
+- {{rule}}
+{% endfor %}
+
+### Bonus Point Opportunities
+{% for bonus in project_constraints.bonus_criteria %}
+- {{bonus}}
+{% endfor %}
+
+---
+
+## Evaluation Process
+
+{{evaluation_process.overview}}
+
+### Evaluation Phases
+
+{% for phase in evaluation_process.phases %}
+**{{phase.name}}** {% if phase.duration %}_({{phase.duration}})_{% endif %}  
+{{phase.description}}
+
+{% endfor %}
+
+### Scoring Methodology
+
+{{evaluation_process.scoring_methodology}}
+
+---
+
+## Scoring Categories
+
+### Round 1: Initial Phase (Technical Screening)
+
+{% for criterion in judging_criteria.initial_phase %}
+
+#### {{criterion.weight}}%. {{criterion.name}}
+
+_{{criterion.description}}_
+
+| Score | Criteria | Description |
+| ----- | -------- | ----------- |
+| 5     | Exceptional | Exceeds expectations, innovative approach, production-ready quality |
+| 4     | Very Good | Strong implementation with minor areas for improvement |
+| 3     | Good | Meets requirements with solid execution |
+| 2     | Basic | Functional but lacks polish or depth |
+| 1     | Needs Work | Incomplete implementation or significant issues |
+
+{% endfor %}
+
+### Round 2: Final Phase (Presentations)
+
+{% for criterion in judging_criteria.final_phase %}
+
+#### {{criterion.weight}}%. {{criterion.name}}
+
+_{{criterion.description}}_
+
+| Score | Criteria | Description |
+| ----- | -------- | ----------- |
+| 5     | Exceptional | Exceeds expectations, innovative approach, production-ready quality |
+| 4     | Very Good | Strong implementation with minor areas for improvement |
+| 3     | Good | Meets requirements with solid execution |
+| 2     | Basic | Functional but lacks polish or depth |
+| 1     | Needs Work | Incomplete implementation or significant issues |
+
+{% endfor %}
+
+## Scoring Sheet
+
+### Round 1: Initial Phase
+| Team Name | {% for criterion in judging_criteria.initial_phase %}{{criterion.name}} ({{criterion.weight}}%) | {% endfor %}Total Score | Notes |
+| --------- | {% for criterion in judging_criteria.initial_phase %}------------------- | {% endfor %}------------ | ----- |
+| | {% for criterion in judging_criteria.initial_phase %} | {% endfor %} | |
+
+### Round 2: Final Phase
+| Team Name | {% for criterion in judging_criteria.final_phase %}{{criterion.name}} ({{criterion.weight}}%) | {% endfor %}Total Score | Notes |
+| --------- | {% for criterion in judging_criteria.final_phase %}------------------- | {% endfor %}------------ | ----- |
+| | {% for criterion in judging_criteria.final_phase %} | {% endfor %} | |
+
+## Final Score Calculation
+
+- Each category score (1-5) is multiplied by its percentage weight
+- The weighted scores are summed to calculate the final score (maximum 5 points)
+
+## Feedback Section
+
+For each submission, judges should provide:
+
+1. **Strengths**: Key positive aspects of the project
+2. **Areas for Improvement**: Constructive feedback on how the project could be enhanced
+3. **Additional Comments**: Any other relevant observations or suggestions
